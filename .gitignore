@@ -1,0 +1,7 @@
+# User-specific stuff
+.idea/**/workspace.xml
+
+# IntelliJ
+out/
+
+# https://github.com/github/gitignore/blob/master/Global/JetBrains.gitignore
