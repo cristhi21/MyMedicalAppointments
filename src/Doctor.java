@@ -1,10 +1,12 @@
 public class Doctor {
-    int id;
+    static int id = 0;
+    int Showid;
     String name;
     String speciality;
 
     public Doctor(){
-        System.out.println("Construyendo el objeto conductor");
+        //System.out.println("Construyendo el objeto Doctor");
+        id++;
     }
 
     public Doctor(String name){
@@ -14,5 +16,9 @@ public class Doctor {
     //Comportamientos
     public void showName(){
         System.out.println(name);
+    }
+
+    public void showId(){
+        System.out.println("El Id del Doctor es: " + id);
     }
 }
