@@ -1,14 +1,29 @@
+import javax.print.Doc;
 import java.lang.reflect.Parameter;
+import java.util.Date;
 
 import static UI.UIMenu.*;
 
 public class Main {
     public static void main(String[] args) {
-        Patient patient = new Patient("Zonia", "zcvargas@mail.com");
+
+        Doctor myDoctor = new Doctor("Alejandro", "Dr corazon");
+        myDoctor.availableAppointment(new Date(), "1pm");
+        myDoctor.availableAppointment(new Date(), "5pm");
+        myDoctor.availableAppointment(new Date(), "10am");
+
+        System.out.println(myDoctor.getAvailableAppointment());
+
+        for (Doctor.AvailableAppointment aA : myDoctor.getAvailableAppointment()
+             ) {
+            System.out.println(aA.getDate() + " " + aA.getTime());
+        }
+
+        /*Patient patient = new Patient("Zonia", "zcvargas@mail.com");
         patient.setName("Laura");
         patient.setPhoneNumber("3333333333333");
         System.out.println(patient.getName());
-        System.out.println(patient.getPhoneNumber());
+        System.out.println(patient.getPhoneNumber());*/
 
         //vistazoMemoria();
         //primerasClases();
@@ -74,7 +89,6 @@ public class Main {
         System.out.println(paciente.getEmail());
         System.out.println(pacienteTwo.getEmail());
     }
-
 
     private static void primerasClases(){
 
