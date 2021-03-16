@@ -98,14 +98,14 @@ public class Main {
 
         //Doctor 2
         Doctor myDoctor = new Doctor();
-        myDoctor.name = "cristhian vargas";
+        myDoctor.setName("cristhian vargas");
         myDoctor.showName();
         myDoctor.showId();
         System.out.println(Doctor.id);
 
         //Doctor 3
         Doctor chapatin = new Doctor();
-        chapatin.name = "Roberto Gomez Bolaños";
+        chapatin.setName("Roberto Gomez Bolaños");
         chapatin.showName();
         chapatin.showId();
         System.out.println(Doctor.id);

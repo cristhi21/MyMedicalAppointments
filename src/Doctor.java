@@ -2,11 +2,14 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Doctor {
+    //Atributos
     static int id = 0; //Autoincrement
-    int Showid;
-    String name;
-    String speciality;
+    private String name;
+    private String address;
+    private String phoneNumber;
+    private String speciality;
 
+    //Comportamientos
     public Doctor(){
         //System.out.println("Construyendo el objeto Doctor");
     }
@@ -22,7 +25,6 @@ public class Doctor {
         System.out.println("Constructor de un solo parametro");
     }
 
-    //Comportamientos
     public void showName(){
         System.out.println(name);
     }
@@ -44,6 +46,46 @@ public class Doctor {
 
     public ArrayList<AvailableAppointment> getAvailableAppointment(){
         return availableAppointments;
+    }
+
+    public static int getId() {
+        return id;
+    }
+
+    public static void setId(int id) {
+        Doctor.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getSpeciality() {
+        return speciality;
+    }
+
+    public void setSpeciality(String speciality) {
+        this.speciality = speciality;
     }
 
     /**
