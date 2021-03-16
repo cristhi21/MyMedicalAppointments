@@ -7,6 +7,20 @@ import static UI.UIMenu.*;
 public class Main {
     public static void main(String[] args) {
 
+        //citasDisponibles();
+
+        /*Patient patient = new Patient("Zonia", "zcvargas@mail.com");
+        patient.setName("Laura");
+        patient.setPhoneNumber("44444446");
+        System.out.println(patient.getName());
+        System.out.println(patient.getPhoneNumber());*/
+
+        //vistazoMemoria();
+        //primerasClases();
+    }
+
+    private static void citasDisponibles(){
+        System.out.println("Citas");
         Doctor myDoctor = new Doctor("Alejandro", "Dr corazon");
         myDoctor.availableAppointment(new Date(), "1pm");
         myDoctor.availableAppointment(new Date(), "5pm");
@@ -15,18 +29,9 @@ public class Main {
         System.out.println(myDoctor.getAvailableAppointment());
 
         for (Doctor.AvailableAppointment aA : myDoctor.getAvailableAppointment()
-             ) {
+        ) {
             System.out.println(aA.getDate() + " " + aA.getTime());
         }
-
-        /*Patient patient = new Patient("Zonia", "zcvargas@mail.com");
-        patient.setName("Laura");
-        patient.setPhoneNumber("3333333333333");
-        System.out.println(patient.getName());
-        System.out.println(patient.getPhoneNumber());*/
-
-        //vistazoMemoria();
-        //primerasClases();
     }
 
     /**
@@ -93,6 +98,7 @@ public class Main {
     private static void primerasClases(){
 
         //Doctor 1
+        /*
         Doctor doc = new Doctor("plastico");
         doc.showName();
 
@@ -109,7 +115,7 @@ public class Main {
         chapatin.showName();
         chapatin.showId();
         System.out.println(Doctor.id);
-
+        */
         /*
         * LLamada al method static showMenu que se encuentra en el Package UI en la clase UIMenu
         * Regularmente la sintaxis para un metodo static seria <Class>.<method> pero hemos hecho el import de manera static
