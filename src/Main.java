@@ -1,8 +1,7 @@
-import javax.print.Doc;
-import java.lang.reflect.Parameter;
-import java.util.Date;
+import model.Doctor;
+import model.Patient;
 
-import static UI.UIMenu.*;
+import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,7 +9,7 @@ public class Main {
         citasDisponibles();
 
         /*
-        Patient patient = new Patient("Zonia", "zcvargas@mail.com");
+        model.Patient patient = new model.Patient("Zonia", "zcvargas@mail.com");
         System.out.println(patient);
          */
 
@@ -28,7 +27,7 @@ public class Main {
         /*
         System.out.println(myDoctor.getAvailableAppointment());
 
-        for (Doctor.AvailableAppointment aA : myDoctor.getAvailableAppointment()
+        for (model.Doctor.AvailableAppointment aA : myDoctor.getAvailableAppointment()
         ) {
             System.out.println(aA.getDate() + " " + aA.getTime());
         }
@@ -98,24 +97,24 @@ public class Main {
 
     private static void primerasClases(){
 
-        //Doctor 1
+        //model.Doctor 1
         /*
-        Doctor doc = new Doctor("plastico");
+        model.Doctor doc = new model.Doctor("plastico");
         doc.showName();
 
-        //Doctor 2
-        Doctor myDoctor = new Doctor();
+        //model.Doctor 2
+        model.Doctor myDoctor = new model.Doctor();
         myDoctor.setName("cristhian vargas");
         myDoctor.showName();
         myDoctor.showId();
-        System.out.println(Doctor.id);
+        System.out.println(model.Doctor.id);
 
-        //Doctor 3
-        Doctor chapatin = new Doctor();
+        //model.Doctor 3
+        model.Doctor chapatin = new model.Doctor();
         chapatin.setName("Roberto Gomez Bolaños");
         chapatin.showName();
         chapatin.showId();
-        System.out.println(Doctor.id);
+        System.out.println(model.Doctor.id);
         */
         /*
         * LLamada al method static showMenu que se encuentra en el Package UI en la clase UIMenu
