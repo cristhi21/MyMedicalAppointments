@@ -12,6 +12,14 @@ public class Doctor extends User{
         this.speciality = speciality;
     }
 
+    public String getSpeciality() {
+        return speciality;
+    }
+
+    public void setSpeciality(String speciality) {
+        this.speciality = speciality;
+    }
+
     //Collection
     ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
     /**
@@ -27,12 +35,10 @@ public class Doctor extends User{
         return availableAppointments;
     }
 
-    public String getSpeciality() {
-        return speciality;
-    }
-
-    public void setSpeciality(String speciality) {
-        this.speciality = speciality;
+    @Override
+    public String toString() {
+        //Caso util de la herencia
+        return super.toString() + "\nSpeciality: " + speciality + "\nAvailable: " + availableAppointments.toString();
     }
 
     /**
@@ -70,6 +76,11 @@ public class Doctor extends User{
 
         public void setTime(String time) {
             this.time = time;
+        }
+
+        @Override
+        public String toString() {
+            return "AvailableAppointment \nDate: " + date + ", time='" + time;
         }
     }
 

@@ -7,13 +7,12 @@ import static UI.UIMenu.*;
 public class Main {
     public static void main(String[] args) {
 
-        //citasDisponibles();
+        citasDisponibles();
 
-        /*Patient patient = new Patient("Zonia", "zcvargas@mail.com");
-        patient.setName("Laura");
-        patient.setPhoneNumber("44444446");
-        System.out.println(patient.getName());
-        System.out.println(patient.getPhoneNumber());*/
+        /*
+        Patient patient = new Patient("Zonia", "zcvargas@mail.com");
+        System.out.println(patient);
+         */
 
         //vistazoMemoria();
         //primerasClases();
@@ -21,17 +20,19 @@ public class Main {
 
     private static void citasDisponibles(){
         System.out.println("Citas");
-        Doctor myDoctor = new Doctor("Alejandro", "Dr corazon");
+        Doctor myDoctor = new Doctor("Alejandro", "alejo@colmedica.com");
         myDoctor.availableAppointment(new Date(), "1pm");
         myDoctor.availableAppointment(new Date(), "5pm");
         myDoctor.availableAppointment(new Date(), "10am");
-
+        System.out.println(myDoctor);
+        /*
         System.out.println(myDoctor.getAvailableAppointment());
 
         for (Doctor.AvailableAppointment aA : myDoctor.getAvailableAppointment()
         ) {
             System.out.println(aA.getDate() + " " + aA.getTime());
         }
+         */
     }
 
     /**
