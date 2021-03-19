@@ -1,12 +1,25 @@
 import model.Doctor;
+import model.Nurse;
 import model.Patient;
+import model.User;
 
 import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
 
-        citasDisponibles();
+        User user = new Doctor("cvargas", "cvargas@gmail.com");
+        user.showDataUser();
+        System.out.println();
+
+        User userPa = new Patient("zonia", "zvargas@gmail.com");
+        userPa.showDataUser();
+        System.out.println();
+
+        User userNurse = new Nurse("valen", "tina@gmail.com");
+        userNurse.showDataUser();
+
+        //citasDisponibles();
 
         /*
         model.Patient patient = new model.Patient("Zonia", "zcvargas@mail.com");

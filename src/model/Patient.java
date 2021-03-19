@@ -54,4 +54,10 @@ public class Patient extends  User{
                 ", height=" + getHeight() +
                 ", blood='" + blood + '\'';
     }
+
+    @Override
+    public void showDataUser() {
+        System.out.println("Paciente");
+        System.out.println("Historial completo del paciente");
+    }
 }

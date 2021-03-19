@@ -44,6 +44,15 @@ public class Doctor extends User{
     }
 
     /**
+     * Este metodo es abstracto y es de implementacion obligatoria
+     */
+    @Override
+    public void showDataUser() {
+        System.out.println("Doctor del Hospital: Cruz Roja");
+        System.out.println("Depto: cancerologia");
+    }
+
+    /**
      * Clase anidada AvailableAppointment - sirve para reservar citas.
      */
     public static class AvailableAppointment{

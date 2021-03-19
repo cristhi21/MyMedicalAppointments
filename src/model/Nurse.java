@@ -14,4 +14,14 @@ public class Nurse extends User{
     public void setSpeciality(String speciality) {
         this.speciality = speciality;
     }
+
+    /**
+     * Este metodo es abstracto y es de implementacion obligatoria
+     */
+    @Override
+    public void showDataUser() {
+        System.out.println("Enfermera del Hospital: Cruz verde");
+        System.out.println("Depto: nutriologia y pediatria");
+    }
+
 }
