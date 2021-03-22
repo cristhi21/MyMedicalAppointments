@@ -1,7 +1,4 @@
-import model.Doctor;
-import model.Nurse;
-import model.Patient;
-import model.User;
+import model.*;
 
 import java.util.Date;
 
@@ -19,13 +16,28 @@ public class Main {
         User userNurse = new Nurse("valen", "tina@gmail.com");
         userNurse.showDataUser();
 
-        //citasDisponibles();
-
-        /*
-        model.Patient patient = new model.Patient("Zonia", "zcvargas@mail.com");
-        System.out.println(patient);
+        /**
+         * Clases anonima
          */
+        User user1 = new User("cris", "cris@cris.com") {
+            @Override
+            public void showDataUser() {
+                System.out.println();
+                System.out.println("Doctor: " + getName() + " Email: " + getEmail());
+                System.out.println("Hospital: Nueva EPS");
+                System.out.println("Depto: Geriaitria");
+            }
+        };
+        user1.showDataUser();
 
+        ISchedulable iSchedulable = new ISchedulable() {
+            @Override
+            public void schedule(Date date, String time) {
+
+            }
+        };
+
+        //citasDisponibles();
         //vistazoMemoria();
         //primerasClases();
     }
