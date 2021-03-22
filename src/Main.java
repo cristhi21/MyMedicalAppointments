@@ -44,11 +44,14 @@ public class Main {
 
     private static void citasDisponibles(){
         System.out.println("Citas");
+        /*
         Doctor myDoctor = new Doctor("Alejandro", "alejo@colmedica.com");
-        myDoctor.availableAppointment(new Date(), "1pm");
-        myDoctor.availableAppointment(new Date(), "5pm");
-        myDoctor.availableAppointment(new Date(), "10am");
+        myDoctor.addAvailableAppointment(new Date(), "1pm");
+        myDoctor.addAvailableAppointment(new Date(), "5pm");
+        myDoctor.addAvailableAppointment(new Date(), "10am");
         System.out.println(myDoctor);
+        */
+
         /*
         System.out.println(myDoctor.getAvailableAppointment());
 
