@@ -28,27 +28,30 @@ public class UIDoctorMenu {
 
             switch (response){
                 case 1:
+                    showAddAvailableAppointmentMenu();
                     break;
                 case 2:
                     break;
                 case 0:
                     UIMenu.showMenu();
                     break;
+                default:
+                    continue;
 
             }
 
         }while(response!=0);
     }
 
-    private void showAddAvailableAppointmentMenu(){
+    private static void showAddAvailableAppointmentMenu(){
         int response = 0;
         do {
             System.out.println();
             System.out.println("::Add Available Appointment");
             System.out.println(":: Select a Month");
-            for (int i= 0; i <= UIMenu.MONTH.length; i++){
+            for (int i= 0; i < UIMenu.MONTH.length; i++){
                 int j = i + 1;
-                System.out.println(j + ". " + UIMenu.MONTH);
+                System.out.println(j + ". " + UIMenu.MONTH[i]);
             }
             System.out.println("0. Return");
 
@@ -57,7 +60,7 @@ public class UIDoctorMenu {
 
             if (response > 0 && response <= 12){
                 int monthSelected = response;
-                System.out.println(monthSelected + ". " + UIMenu.MONTH[monthSelected]);
+                System.out.println(monthSelected + ". " + UIMenu.MONTH[monthSelected - 1]);
 
                 System.out.println("Insert the date available: [dd/MM/yyyy]");
                 String date = sc.nextLine();
@@ -68,7 +71,7 @@ public class UIDoctorMenu {
                 int responseTime = 0;
                 String time = "";
                 do {
-                    System.out.println("Insertthe time available for date: " + date + "[16:00]");
+                    System.out.println("Insert the time available for date: " + date + "[16:00]");
                     time = sc.nextLine();
                     System.out.println("Your time is: " + time + "\n1.Correct \n2.change time");
                     responseTime = Integer.valueOf(sc.nextLine());

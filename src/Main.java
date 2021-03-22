@@ -1,9 +1,19 @@
 import model.*;
+import static UI.UIMenu.*;
 
 import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
+
+        showMenu();
+        //abstraccion();
+        //citasDisponibles();
+        //vistazoMemoria();
+        //primerasClases();
+    }
+
+    private static void abstraccion(){
 
         User user = new Doctor("cvargas", "cvargas@gmail.com");
         user.showDataUser();
@@ -36,14 +46,10 @@ public class Main {
 
             }
         };
-
-        //citasDisponibles();
-        //vistazoMemoria();
-        //primerasClases();
     }
 
     private static void citasDisponibles(){
-        System.out.println("Citas");
+        //System.out.println("Citas");
         /*
         Doctor myDoctor = new Doctor("Alejandro", "alejo@colmedica.com");
         myDoctor.addAvailableAppointment(new Date(), "1pm");
