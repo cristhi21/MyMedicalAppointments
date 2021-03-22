@@ -8,6 +8,8 @@ import java.util.Date;
 public class Doctor extends User{
     //Atributos
     private String speciality;
+    //Collection
+    private ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
 
     //Comportamientos
 
@@ -24,8 +26,6 @@ public class Doctor extends User{
         this.speciality = speciality;
     }
 
-    //Collection
-    ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
     /**
      * Method que añade citas
      * @param date
@@ -80,11 +80,11 @@ public class Doctor extends User{
             this.id = id;
         }
 
-        public Date getDate() {
+        public Date getDate(String DATE) {
             return date;
         }
 
-        public String getDate(String DATE) {
+        public String getDate() {
             return format.format(date);
         }
 

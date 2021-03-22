@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class UIDoctorMenu {
 
-    public static ArrayList<Doctor> doctorsAvailableAppointment = new ArrayList<>();
+    public static ArrayList<Doctor> doctorsAvailableAppointments = new ArrayList<>();
     /**
      * Mostrar logica de opciones para nuestro doctor
      */
@@ -75,10 +75,10 @@ public class UIDoctorMenu {
                     time = sc.nextLine();
                     System.out.println("Your time is: " + time + "\n1.Correct \n2.change time");
                     responseTime = Integer.valueOf(sc.nextLine());
-
                 }while (responseTime == 2);
 
                 UIMenu.doctorLogged.addAvailableAppointment(date, time);
+                checkDoctorAvailableAppointment(UIMenu.doctorLogged);
             }else if(response == 0){
                 //Regresar al menu anterior
                 showDoctorMenu();
@@ -89,8 +89,8 @@ public class UIDoctorMenu {
 
     private static void checkDoctorAvailableAppointment(Doctor doctor){
         if(doctor.getAvailableAppointment().size() > 0
-            && !doctorsAvailableAppointment.contains(doctor)){
-            doctorsAvailableAppointment.add(doctor);
+            && !doctorsAvailableAppointments.contains(doctor)){
+            doctorsAvailableAppointments.add(doctor);
         }
     }
 }
