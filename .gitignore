@@ -1,5 +1,6 @@
 # model.User-specific stuff
 .idea/**/workspace.xml
+.idea/**/uiDesigner.xml
 
 # IntelliJ
 out/
