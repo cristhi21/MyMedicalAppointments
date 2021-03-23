@@ -27,6 +27,7 @@ public class UIPatientMenu {
                     showBookAppointmentMenu();
                     break;
                 case 2:
+                    showPatientMyAppoinments();
                     break;
                 case 0:
                     UI.UIMenu.showMenu();
